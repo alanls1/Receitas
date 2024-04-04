@@ -1,0 +1,25 @@
+.header {
+  .navbar,
+  .btn-primary {
+    display: none;
+  }
+
+  & {
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-inline: 16px;
+    border-block-end: 1px solid var(--outline);
+    z-index: 4;
+  }
+
+  .theme-switch {
+    margin-inline-start: auto;
+  }
+}

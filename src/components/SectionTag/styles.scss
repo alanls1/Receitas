@@ -1,0 +1,36 @@
+.slider {
+  --gap: 8px;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 5px;
+
+  &::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  &:where(:hover, :focus-visible)::-webkit-scrollbar-thumb {
+    background-color: var(--alpha-10);
+  }
+
+  .slider-wrapper {
+    display: flex;
+    align-items: stretch;
+    gap: var(--gap);
+    transition: var(--transition-medium);
+  }
+
+  .load-more-card {
+    height: 100%;
+    background-color: var(--primary-container);
+    border-radius: var(--radius-4);
+    border: 1px solid var(--outline);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
